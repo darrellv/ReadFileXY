@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+
 
 namespace ReadFileXY
 {
@@ -6,7 +8,13 @@ namespace ReadFileXY
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string[] lines = File.ReadAllLines("test.txt");
+
+            string[] array = lines[2].Split(",");
+
+            string result = array[5];
+
+            Console.WriteLine(result);
         }
     }
 }
